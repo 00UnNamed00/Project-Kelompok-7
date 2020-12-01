@@ -46,7 +46,7 @@ if (isset($_POST["submit"]) ) {
 		</ul>
 	</div>
 	<div class="main">
-		<p class="sign" align="center">Regist</p>
+		<p class="sign" align="center">Register</p>
 		<?php if (isset($_SESSION['gagal_login'])) {
 			echo "<p>" . $_SESSION['gagal_login'] . "</p>";
 		} ?>
