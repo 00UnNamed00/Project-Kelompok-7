@@ -51,7 +51,7 @@ if (isset($_POST["submit"]) ) {
 			<input class="un" type="text" name="username" align="center" placeholder="Username" required autocomplete="OFF">
 			<input class="un" type="text" name="email" align="center" placeholder="Email" required autocomplete="OFF">
 			<input class="pass" type="password" name="password1" align="center" placeholder="Password" id="password">
-			<input class="pass" type="password" name="password2" align="center" placeholder="Confirm Password"><br>
+			<input class="pass" type="password" name="password2" align="center" placeholder="Confirm Password" id="confirmpassword"><br>
 			<label class="show"> Show Password
 			<input type="checkbox" name="checked" id="checkbox">
 				<span class="checkmark"></span>
