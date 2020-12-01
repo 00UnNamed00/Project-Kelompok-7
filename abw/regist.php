@@ -57,6 +57,7 @@ if (isset($_POST["submit"]) ) {
 				<span class="checkmark"></span>
 			</label>
 			<button class="submit" name="submit" type="submit" align="center">Sign In</button>
+			<center><p><a href="login.php">Have an account? <ins>Click here</ins></a></p></center>
 		</form>
 	</div>
 
