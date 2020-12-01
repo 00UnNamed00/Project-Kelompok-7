@@ -23,7 +23,7 @@ if (isset($_POST['submit'])) {
 		exit();
 
 	} else {
-		$_SESSION['gagal_login'] = "USERNAME ATAU PASSWORD ANDA SALAH";
+		$_SESSION['gagal_login'] = "Username atau Password Anda Salah";
 		header('Location: login.php');
 		exit();
 	}
@@ -60,7 +60,7 @@ if (isset($_POST['submit'])) {
 	<div class="main">
 		<p class="sign" align="center">Sign In</p>
 		<?php if(isset($_SESSION['gagal_login'])) {
-			echo "<p>".$_SESSION['gagal_login']."</p>";
+			echo "<p class='error' align='center'>".$_SESSION['gagal_login']."</p>";
 		} ?>
 		<form class="form1" action="" method="POST">
 			<input class="un" type="text" name="username" align="center" placeholder="Username" required autocomplete="OFF">
