@@ -46,10 +46,7 @@ if (isset($_POST["submit"]) ) {
 		</ul>
 	</div>
 	<div class="main">
-		<p class="sign" align="center">Register</p>
-		<?php if (isset($_SESSION['gagal_login'])) {
-			echo "<p>" . $_SESSION['gagal_login'] . "</p>";
-		} ?>
+		<p class="sign" align="center">Sign Up</p>
 		<form class="form1" action="" method="POST">
 			<input class="un" type="text" name="username" align="center" placeholder="Username" required autocomplete="OFF">
 			<input class="un" type="text" name="email" align="center" placeholder="Email" required autocomplete="OFF">
@@ -60,7 +57,6 @@ if (isset($_POST["submit"]) ) {
 				<span class="checkmark"></span>
 			</label>
 			<button class="submit" name="submit" type="submit" align="center">Sign In</button>
-			<center><p><a href="login.php">Sudah punya akun? <ins>Klik Disini</ins></a></p></center>
 		</form>
 	</div>
 
