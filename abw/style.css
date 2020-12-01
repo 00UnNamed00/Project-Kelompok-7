@@ -112,6 +112,10 @@
                     transform: rotate(45deg);
                 }
                 
+                #checkbox {
+                    display: none;
+                }
+                
                 form.form1 {
                     padding-top: 40px;
                 }
