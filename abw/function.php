@@ -17,6 +17,15 @@ function regist($data) {
 		</script>";
 		return false;
 	}
+	
+// mengecek email sudah ada atau belum
+	$data = mysqli_query($koneksi, "SELECT email FROM tb_user WHERE email = '$email' ");
+	if (mysqli_num_rows($data) > 0) {
+		echo "<script>
+		alert('Email Telah Digunakan !');
+		</script>";
+		return false;
+	}
 
 // mengecek konfirmasi password
 	if ($password1 !== $password2) {
