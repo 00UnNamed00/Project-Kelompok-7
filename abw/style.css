@@ -22,6 +22,12 @@
                     font-size: 23px;
                 }
                 
+                .error {
+                    margin-top: 30px;
+                    margin-bottom: -30px;
+                    color: red;
+                }
+                
                 .un {
                     width: 76%;
                     color: #ffffff;
