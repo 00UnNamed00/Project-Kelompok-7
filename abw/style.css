@@ -14,7 +14,8 @@
                 }
                 
                 .sign {
-                    padding-top: 40px;
+                    margin: 0;
+                    padding-top: 20px;
                     color: #F89C04;
                     font-family: 'Ubuntu', sans-serif;
                     font-weight: bold;
@@ -34,11 +35,81 @@
                     outline: none;
                     box-sizing: border-box;
                     border: 2px solid rgba(0, 0, 0, 0.02);
-                    margin-bottom: 50px;
                     margin-left: 46px;
                     text-align: center;
                     margin-bottom: 27px;
                     font-family: 'Ubuntu', sans-serif;
+                }
+                
+                .show {
+                    height: auto;
+                    color: #F89C04;
+                    margin-left: 16%;
+                    font-family: 'Ubuntu', sans-serif;
+                    font-size: 16px;
+                    margin-bottom: 27px;
+                    display: block;
+                    position: relative;
+                    padding-left: 35px;
+                    cursor: pointer;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                }
+                
+                .show input {
+                    position: absolute;
+                    opacity: 0;
+                    cursor: pointer;
+                    height: 0;
+                    width: 0;
+                }
+                /* Create a custom checkbox */
+                
+                .checkmark {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 20px;
+                    width: 20px;
+                    background-color: rgba(138, 134, 134, 0.5);
+                    ;
+                }
+                /* On mouse-over, add a grey background color */
+                
+                .show:hover input~.checkmark {
+                    background-color: rgba(138, 134, 134, 0.1);
+                }
+                /* When the checkbox is checked, add a background */
+                
+                .show input:checked~.checkmark {
+                    background-color: rgba(138, 134, 134, 0.1);
+                }
+                /* Create the checkmark/indicator (hidden when not checked) */
+                
+                .checkmark:after {
+                    content: "";
+                    position: absolute;
+                    display: none;
+                }
+                /* Show the checkmark when checked */
+                
+                .show input:checked~.checkmark:after {
+                    display: block;
+                }
+                /* Style the checkmark/indicator */
+                
+                .show .checkmark:after {
+                    left: 6px;
+                    top: 2px;
+                    width: 5px;
+                    height: 10px;
+                    border: solid #F89C04;
+                    border-width: 0 3px 3px 0;
+                    -webkit-transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                    transform: rotate(45deg);
                 }
                 
                 form.form1 {
@@ -58,10 +129,9 @@
                     outline: none;
                     box-sizing: border-box;
                     border: 2px solid rgba(0, 0, 0, 0.02);
-                    margin-bottom: 50px;
                     margin-left: 46px;
                     text-align: center;
-                    margin-bottom: 27px;
+                    margin-bottom: 15px;
                     font-family: 'Ubuntu', sans-serif;
                 }
                 
@@ -72,8 +142,8 @@
                 .pass:focus {
                     border: 2px solid #F89C04 !important;
                 }
-                
                 /*button signin login*/
+                
                 .submit {
                     cursor: pointer;
                     border-radius: 5em;
@@ -90,8 +160,8 @@
                     font-weight: 700;
                     box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
                 }
+                /* button login google account*/
                 
-               /* button login google account*/
                 .google {
                     cursor: pointer;
                     border-radius: 5em;
@@ -103,16 +173,18 @@
                     padding-bottom: 10px;
                     padding-top: 10px;
                     font-family: 'Ubuntu', sans-serif;
-                    margin-left: 32%;
-                    font-size: 13px;
+                    margin-left: 29%;
+                    font-size: 16px;
+                    font-weight: 700;
                     box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
                 }
                 
                 .or {
+                    margin: 0;
                     text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
                     color: #F89C04;
                     padding: 10px;
-                    font-size: 13px;
+                    font-size: 14px;
                 }
                 
                 .create {
@@ -216,7 +288,7 @@
                 body img {
                     margin-top: -70px;
                     margin-left: 20px;
-                    width: 70px;
+                    width: 4rem;
                     height: auto;
                     position: absolute;
                 }
