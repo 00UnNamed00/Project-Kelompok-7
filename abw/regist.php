@@ -30,7 +30,7 @@ if (isset($_POST["submit"]) ) {
 	<link rel="stylesheet" href="font-awesome">
 	<script type="text/javascript" src="jquery.js"></script>
 	<script type="text/javascript" src="script.js"></script>
-	<title>Registrasi</title>
+	<title>Sign Up</title>
 </head>
 
 <body>
