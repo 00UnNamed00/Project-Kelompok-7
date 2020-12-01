@@ -67,6 +67,7 @@ if (isset($_POST['submit'])) {
 			<input class="pass" type="password" name="password" align="center" placeholder="Password" id="password"><br>
 			<input type="checkbox" id="checkbox">
 			<label class="show"> Show Password
+			<input type="checkbox" name="checked">
 				<span class="checkmark"></span>
 			</label>
 			<button class="submit" name="submit" type="submit" align="center">Sign In</button>
