@@ -23,27 +23,45 @@ if (isset($_POST["submit"]) ) {
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Regist</title>
+	<link rel="shortcut icon" href="logo.svg">
+	<link rel="stylesheet" href="style.css">
+	<link href="gg.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="font-awesome">
 	<script type="text/javascript" src="jquery.js"></script>
 	<script type="text/javascript" src="script.js"></script>
+	<title>Face ID</title>
 </head>
+
 <body>
-	<h3>Register</h3>
-	<?php if(isset($_SESSION['gagal_login'])) {
-		echo "<p>".$_SESSION['gagal_login']."</p>";
-	} ?>
+	<img src="logo.svg" alt="">
+	<div class="animation-area">
+		<ul class="box-area">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<div class="main">
+		<p class="sign" align="center">Regist</p>
+		<?php if (isset($_SESSION['gagal_login'])) {
+			echo "<p>" . $_SESSION['gagal_login'] . "</p>";
+		} ?>
+		<form class="form1" action="" method="POST">
+			<input class="un" type="text" name="username" align="center" placeholder="Username" required autocomplete="OFF">
+			<input class="un" type="text" name="email" align="center" placeholder="Email" required autocomplete="OFF">
+			<input class="pass" type="password" name="password" align="center" placeholder="Password" id="password">
+			<input class="pass" type="copas" name="copas" align="center" placeholder="Confirm Password" id="copas">
+			<!--<label class="show"> Show Password
+				<input type="checkbox" name="checked">
+				<span class="checkmark"></span>
+			</label>-->
+			<button class="submit" name="submit" type="submit" align="center">Sign In</button>
+		</form>
+	</div>
 
-	<form action="" method="POST">
-		<input type="text" name="username" placeholder="Nama lengkap" autocomplete="OFF" autofocus required><br>
-		<input type="text" name="email" placeholder="Email" autocomplete="OFF" required><br>
-		<input type="password" name="password1" placeholder="Password" id="password" autocomplete="OFF" required><br>
-		<!-- <input type="checkbox" name="checkbox" id="checkbox">Show Password<br> -->
-		<input type="password" name="password2" placeholder="Verifikasi Password" autocomplete="OFF" required ><br>
-		<input type="checkbox" id="checkbox">Show Password<br>
-
-
-		<button type="submit" name="submit">Daftar</button><br>
-		<p><a href="login.php">Sudah punya akun? Klik Disini</a></p>
-	</form>
 </body>
 </html>
