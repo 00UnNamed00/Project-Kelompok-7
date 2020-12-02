@@ -1,7 +1,35 @@
 <?php 
 session_start();
+include('config.php');
+/*Client ID : 177727695476-hi7ld41ak5e241cp0r9ed06gh94tkd2r.apps.googleusercontent.com */
+/*Client secret : lOVTx9DP39gJckk_igPuS-5f */
 
 $koneksi = mysqli_connect('localhost','root','','db_abw');
+
+$google_button = '';
+if(isset($_GET["code"])){
+	$token = $google_client->fetchAccessTokenWithAuthCode($_GET["code"]);
+	if(!isset($token['error'])){
+		$google_client->setAccessToken($token['access_token']);
+		$_SESSION['access_token'] = $token['access_token'];
+		$google_service = new Google_Service_Oauth2($google_client);
+		$data = $google_service->userinfo->get();
+
+		$_SESSION['status'] = "LOGIN";
+		if(!empty($data['given_name'])){
+			$_SESSION['user_name'] = $data['given_name'];
+		}
+		if(!empty($data['email'])){
+			$_SESSION['user_email'] = $data['email'];
+		}
+		if(!empty($data['picture'])){
+			$_SESSION['user_image'] = $data['picture'];
+		}
+	}
+}
+if(!isset($_SESSION['access_token'])){
+	$google_button = '<a href="'.$google_client->createAuthUrl().'"><img src="sign-in-with-google.png" alt=""></a>';
+}
 
 if (isset($_POST['submit'])) {
 
@@ -46,7 +74,7 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
-	<img src="logo.svg" alt="">
+	<img class="logo" src="logo.svg" alt="">
 	<div class="animation-area">
 		<ul class="box-area">
 			<li></li>
@@ -63,15 +91,22 @@ if (isset($_POST['submit'])) {
 			echo "<p class='error' align='center'>".$_SESSION['gagal_login']."</p>";
 		} ?>
 		<form class="form1" action="" method="POST">
-			<input class="un" type="text" name="username" align="center" placeholder="Username" required autocomplete="OFF">
+			<input class="un" type="text" name="username" align="center" placeholder="Username" >
 			<input class="pass" type="password" name="password" align="center" placeholder="Password" id="password"><br>
 			<label class="show"> Show Password
 			<input type="checkbox" name="checked" id="checkbox">
 				<span class="checkmark"></span>
 			</label>
 			<button class="submit" name="submit" type="submit" align="center">Sign In</button>
-			<p class="or" align="center">Or Sign In with</p>
-			<button class="google" align="center">Google Account</button>
+			<p class="or" align="center">OR</p>
+			<?php 
+			if($google_button == ''){
+				
+			}
+			else{
+				echo '<div class="google" align="center">'.$google_button . '</div>';
+			}
+			?>
 			<p class="create" align="center">
 				<ins><a href="regist.php">Create Account</a></ins>	
 			</p>

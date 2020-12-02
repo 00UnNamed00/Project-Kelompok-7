@@ -170,24 +170,6 @@
                     font-weight: 700;
                     box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
                 }
-                /* button login google account*/
-                
-                .google {
-                    cursor: pointer;
-                    border-radius: 5em;
-                    color: #fff;
-                    background: #F89C04;
-                    border: 0;
-                    padding-left: 30px;
-                    padding-right: 30px;
-                    padding-bottom: 10px;
-                    padding-top: 10px;
-                    font-family: 'Ubuntu', sans-serif;
-                    margin-left: 29%;
-                    font-size: 16px;
-                    font-weight: 700;
-                    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
-                }
                 
                 .or {
                     margin: 0;
@@ -198,6 +180,7 @@
                 }
                 
                 .create {
+                    margin: 0;
                     cursor: pointer;
                     border: 0;
                     padding-left: 30px;
@@ -295,9 +278,9 @@
                     }
                 }
                 
-                body img {
+                img.logo {
                     margin-top: -70px;
-                    margin-left: 20px;
+                    margin-left: 30px;
                     width: 4rem;
                     height: auto;
                     position: absolute;
