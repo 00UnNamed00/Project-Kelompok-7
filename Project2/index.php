@@ -12,23 +12,6 @@ if ($_SESSION['status'] !="LOGIN") {
 
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Index</title>
-</head>
-<body>
-	<!--<a href="logout.php">Logout</a>-->
-
-</body>
-</html><?php
-
-if ($_SESSION['status'] != "LOGIN") {
-	header("Location: login.php");
-	exit;
-}
-?>
-
-<!DOCTYPE html>
-<html>
 
 <head>
 	<link rel="shortcut icon" href="logo.svg">
@@ -42,7 +25,7 @@ if ($_SESSION['status'] != "LOGIN") {
 </head>
 
 <body>
-	<!--<img src="logo.svg" alt="">-->
+	<img class="logo" src="logo.svg" alt="">
 	<div class="animation-area">
 		<ul class="box-area">
 			<li></li>
@@ -53,12 +36,11 @@ if ($_SESSION['status'] != "LOGIN") {
 			<li></li>
 		</ul>
 	</div>
-	<i class="far fa-user"></i>
 	<div class="dropdown">
-		<button class="dropbtn">nama user</button>
+		<button class="dropbtn"><?php  echo $_SESSION['user_name'] ?></button>
 		<div class="dropdown-content">
-			<a href="logout.php">Logout</a>
 			<a href="profile.php">My Profile</a>
+			<a href="logout.php">Logout</a>
 		</div>
 	</div>
 	<div class=" maindex">
