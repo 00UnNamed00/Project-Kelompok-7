@@ -16,7 +16,7 @@ if ($_SESSION['status'] !="LOGIN") {
 	<title>Index</title>
 </head>
 <body>
-	<a href="logout.php">Logout</a>
+	<!--<a href="logout.php">Logout</a>-->
 
 </body>
 </html><?php
