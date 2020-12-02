@@ -101,7 +101,8 @@ if (isset($_POST['submit'])) {
 			<p class="or" align="center">OR</p>
 			<?php 
 			if($google_button == ''){
-				
+				header('Location: index.php');
+				exit();
 			}
 			else{
 				echo '<div class="google" align="center">'.$google_button . '</div>';
