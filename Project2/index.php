@@ -20,9 +20,6 @@ if ($_SESSION['status'] !="LOGIN") {
 
 </body>
 </html><?php
-session_start();
-
-include 'function.php';
 
 if ($_SESSION['status'] != "LOGIN") {
 	header("Location: login.php");
