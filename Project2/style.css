@@ -12,6 +12,144 @@
                     border-radius: 1.5em;
                     box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
                 }
+/*dropdown profile*/
+                .dropbtn {
+                    cursor: pointer;
+                    border-radius: 5em;
+                    color: #fff;
+                    background: #F89C04;
+                    border: 0;
+                    padding-left: 40px;
+                    padding-right: 40px;
+                    padding-bottom: 10px;
+                    padding-top: 10px;
+                    margin-bottom: 20px;
+                    margin-left: 1100px;
+                    font-size: 16px;
+                    font-weight: 700;
+                    text-align: center;
+                }
+
+                .dropdown {
+                    align: right;
+                    /*position: relative;
+                    display: inline-block;*/
+                }
+
+                .dropdown-content {
+                    display: none;
+                    position: absolute;
+                    background-color: #343B45;
+                    min-width: 50px;
+                    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                    z-index: 1;
+                    margin-left: 1100px;
+                }
+
+                .dropdown-content a {
+                    color: white;
+                    padding: 12px 16px;
+                    text-decoration: none;
+                    display: block;
+                }
+
+                .dropdown-content a:hover {
+                    background-color: #343B45
+                }
+
+                .dropdown:hover .dropdown-content {
+                    display: block;
+                }
+
+                .dropdown:hover .dropbtn {
+                    background-color: #F89C04;
+                }
+
+                /*selesai dropdown profile*/
+
+                /*untuk di index*/
+
+                form.form2 {
+                    padding-top: 50px;
+                }
+
+                .maindex {
+                    background-color: #343B45;
+                    grid-area: left;
+                    width: 400px;
+                    height: 300px;
+                    margin: 6em auto;
+                    border-radius: 1.5em;
+                    margin-left: 20px;
+                    margin-buttom: 50px;
+                    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+                }
+
+                .urldex {
+                    width: 76%;
+                    color: #ffffff;
+                    font-weight: 700;
+                    font-size: 16px;
+                    letter-spacing: 1px;
+                    background: rgba(138, 134, 134, 0.1);
+                    padding: 10px 20px;
+                    border: none;
+                    border-radius: 20px;
+                    outline: none;
+                    box-sizing: border-box;
+                    border: 2px solid rgba(0, 0, 0, 0.02);
+                    margin-left: 46px;
+                    text-align: center;
+                    margin-bottom: 10px;
+                    font-family: 'Ubuntu', sans-serif;
+                }
+
+                .sub {
+                    cursor: pointer;
+                    border-radius: 5em;
+                    color: #fff;
+                    background: #F89C04;
+                    border: 0;
+                    padding-left: 40px;
+                    padding-right: 40px;
+                    padding-bottom: 10px;
+                    padding-top: 10px;
+                    font-family: 'Ubuntu', sans-serif;
+                    margin-left: 35%;
+                    margin-bottom: 15px;
+                    font-size: 16px;
+                    font-weight: 700;
+                    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+                }
+
+                .foldex {
+                    width: 76%;
+                    color: #ffffff;
+                    font-weight: 700;
+                    font-size: 16px;
+                    letter-spacing: 1px;
+                    background: rgba(138, 134, 134, 0.1);
+                    padding: 10px 20px;
+                    border: none;
+                    border-radius: 20px;
+                    outline: none;
+                    box-sizing: border-box;
+                    border: 2px solid rgba(0, 0, 0, 0.02);
+                    margin-left: 46px;
+                    text-align: center;
+                    margin-bottom: 10px;
+                    font-family: 'Ubuntu', sans-serif;
+                }
+
+                .urldex:focus {
+                    border: 2px solid #F89C04 !important;
+                }
+
+                .foldex:focus {
+                    border: 2px solid #F89C04 !important;
+                }
+
+                /*selesai index*/
                 
                 .sign {
                     margin: 0;
