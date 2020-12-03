@@ -37,7 +37,7 @@ if ($_SESSION['status'] !="LOGIN") {
 		</ul>
 	</div>
 	<div class="dropdown">
-		<button class="dropbtn"><?php  echo $_SESSION['user_name'] ?></button>
+		<button class="dropbtn"><?php  echo $_SESSION['username']; ?></button>
 		<div class="dropdown-content">
 			<a href="profile.php">My Profile</a>
 			<a href="logout.php">Logout</a>

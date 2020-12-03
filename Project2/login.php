@@ -1,6 +1,7 @@
 <?php 
 session_start();
 include('config.php');
+include('function.php');
 /*Client ID : 177727695476-hi7ld41ak5e241cp0r9ed06gh94tkd2r.apps.googleusercontent.com */
 /*Client secret : lOVTx9DP39gJckk_igPuS-5f */
 
@@ -17,14 +18,24 @@ if(isset($_GET["code"])){
 
 		$_SESSION['status'] = "LOGIN";
 		if(!empty($data['given_name'])){
-			$_SESSION['user_name'] = $data['given_name'];
+			$username = $data['given_name'];
+			$_SESSION['username'] = $username;
 		}
 		if(!empty($data['email'])){
-			$_SESSION['user_email'] = $data['email'];
+			$email = $data['email'];
 		}
 		if(!empty($data['picture'])){
 			$_SESSION['user_image'] = $data['picture'];
 		}
+	
+		// mengecek email sudah ada atau belum
+		$result = mysqli_query($koneksi, "SELECT email FROM tb_user WHERE email = '$email' ");
+		if (mysqli_num_rows($result) > 0) {
+			echo "<script>
+			alert('Email Telah Digunakan !');
+			</script>";
+		}
+		mysqli_query($koneksi, "INSERT INTO tb_user VALUES('', '$username', '$email','') ");
 	}
 }
 if(!isset($_SESSION['access_token'])){
