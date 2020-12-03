@@ -35,7 +35,10 @@ if(isset($_GET["code"])){
 			alert('Email Telah Digunakan !');
 			</script>";
 		}
-		mysqli_query($koneksi, "INSERT INTO tb_user VALUES('', '$username', '$email','') ");
+		else{
+			mysqli_query($koneksi, "INSERT INTO tb_user VALUES('', '$username', '$email','') ");
+		}
+		
 	}
 }
 if(!isset($_SESSION['access_token'])){
