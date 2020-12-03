@@ -23,9 +23,11 @@ if(isset($_GET["code"])){
 		}
 		if(!empty($data['email'])){
 			$email = $data['email'];
+			$_SESSION['email'] = $email;
 		}
 		if(!empty($data['picture'])){
-			$_SESSION['user_image'] = $data['picture'];
+			$image = $data['picture'];
+			$_SESSION['user_image'] = $image;
 		}
 	
 		// mengecek email sudah ada atau belum
@@ -61,6 +63,8 @@ if (isset($_POST['submit'])) {
 		$_SESSION['status'] = "LOGIN";
 		$_SESSION['username'] = $username;
 		$_SESSION['id_user'] = $data_user['id_user'];
+		$_SESSION['email'] = $data_user['email'];
+		$_SESSION['user_image'] = 'image.svg';
 		header('Location: index.php');
 		exit();
 

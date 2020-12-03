@@ -1,5 +1,9 @@
 <?php 
 session_start();
+include('function.php');
+$email = $_SESSION['email'];
+$result = mysqli_query($koneksi, "SELECT * FROM tb_user WHERE email = '$email' ");
+$result2 = mysqli_fetch_assoc($result);
 ?>
 <!DOCTYPE html>
 <html>
@@ -35,11 +39,11 @@ session_start();
 		} ?>
         <form class="form3" action="" method="POST">
             <div class="tulisan"> <label>Username</label></div>
-            <input class="un" type="text" name="username" align="center" placeholder="Username" required autocomplete="OFF">
+            <input class="un" type="text" name="username" align="center" placeholder="Username" value="<?php echo $result2['username']; ?>">
             <div class="tulisan"> <label>Email</label></div>
-            <input class="un" type="text" name="email" align="center" placeholder="Email" required autocomplete="OFF">
+            <input class="un" type="text" name="email" align="center" placeholder="Email" value="<?php echo $result2['email']; ?>">
             <div class="tulisan"> <label>Password</label></div>
-            <input class="pass" type="password" name="password1" align="center" placeholder="Password" id="password">
+            <input class="pass" type="password" name="password1" align="center" placeholder="Password" id="password" value="<?php echo $result2['password']; ?>">
             <label class="show"> Show Password
 			<input type="checkbox" name="checked" id="checkbox">
 				<span class="checkmark"></span>

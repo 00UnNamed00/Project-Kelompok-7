@@ -21,7 +21,7 @@ if ($_SESSION['status'] !="LOGIN") {
 	<link rel="stylesheet" href="font-awesome">
 	<script type="text/javascript" src="jquery.js"></script>
 	<script type="text/javascript" src="script.js"></script>
-	<title>Index</title>
+	<title>Face ID</title>
 </head>
 
 <body>
