@@ -108,7 +108,7 @@ if (isset($_POST['submit'])) {
 			<input type="checkbox" name="checked" id="checkbox">
 				<span class="checkmark"></span>
 			</label>
-			<button class="submit" name="submit" type="submit" align="center">Sign In</button>
+			<button class="submit" name="submit" type="submit" align="center">SIGN IN</button>
 			<p class="or" align="center">OR</p>
 			<?php 
 			if($google_button == ''){

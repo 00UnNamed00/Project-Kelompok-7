@@ -37,21 +37,18 @@ if ($_SESSION['status'] !="LOGIN") {
 		</ul>
 	</div>
 	<div class="dropdown">
-		<button class="dropbtn"><?php  echo $_SESSION['username']; ?></button>
+		<button class="dropbtn"><?php  echo ucwords($_SESSION['username']); ?></button>
 		<div class="dropdown-content">
-			<a href="profile.php">My Profile</a>
-			<a href="logout.php">Logout</a>
+			<a href="profile.php" align="center">My Profile</a>
+			<a href="logout.php" align="center">Logout</a>
 		</div>
 	</div>
 	<div class=" maindex">
-		<?php if (isset($_SESSION['gagal_login'])) {
-			echo "<p class='error' align='center'>" . $_SESSION['gagal_login'] . "</p>";
-		} ?>
 		<form class="form2" action="" method="POST">
 			<input class="urldex" type="text" name="urldex" align="center" placeholder="Input URL">
-			<button class="sub" type="text" name="sub" align="center">Submit</button>
+			<button class="sub" type="text" name="sub" align="center">SUBMIT</button>
 			<input type="file" name="file" id="file" class="urldex">
-			<button class="sub" type="text" name="sub" align="center">Submit</button>
+			<button class="sub" type="text" name="sub" align="center">SUBMIT</button>
 		</form>
 	</div>
 

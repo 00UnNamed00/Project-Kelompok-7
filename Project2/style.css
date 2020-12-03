@@ -8,7 +8,7 @@ body {
     background-color: #343B45;
     width: 400px;
     height: 450px;
-    margin: 6 em auto;
+    margin: 6em auto;
     border-radius: 1.5em;
     box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
 }
@@ -21,8 +21,8 @@ body {
     color: #fff;
     background: #F89C04;
     border: 0;
-    padding-left: 50px;
-    padding-right: 50px;
+    height: 50px;
+    width: 150px;
     padding-bottom: 10px;
     padding-top: 10px;
     font-size: 16px;
@@ -48,10 +48,9 @@ body {
 
 .dropdown-content a {
     color: white;
-    padding-left: 36px;
-    padding-right: 35px;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 150px;
     text-decoration: none;
     display: block;
 }
@@ -67,16 +66,44 @@ body {
 .dropdown:hover .dropbtn {
     background-color: #F89C04;
 }
+
+
 /*selesai dropdown profile*/
 
+
 /*untuk di my profile*/
+
+form.form3 {
+    padding-top: 0px;
+}
+
+.form3 input#password.pass {
+    margin-top: 10px;
+}
+
+.form3 input.un {
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+.form3 .submit {
+    margin-left: 35%;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
 .mainprofil {
     background-color: #343B45;
     width: 400px;
-    height: 500px;
-    margin: 6em auto;
+    height: 590px;
+    margin: 2rem auto;
     border-radius: 1.5em;
     box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+}
+
+.mainprofil .error {
+    color: #CF6679;
+    margin: 0;
 }
 
 .tulisan {
@@ -85,7 +112,9 @@ body {
     padding-left: 25px;
     margin-top: 0px;
     color: #F89C04;
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: 700;
+    margin-left: 46px;
 }
 
 img.profil {
@@ -93,11 +122,13 @@ img.profil {
     height: 90px;
     margin-top: 20px;
     margin-left: 150px;
-    margin-bottom: 0px;
-    background: #fff;
+    margin-bottom: 10px;
     border-radius: 100%;
 }
+
+
 /*selesai my profile*/
+
 
 /*untuk di index*/
 
@@ -141,8 +172,8 @@ form.form2 {
     color: #fff;
     background: #F89C04;
     border: 0;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 25px;
+    padding-right: 25px;
     padding-bottom: 10px;
     padding-top: 10px;
     font-family: 'Ubuntu', sans-serif;
@@ -192,7 +223,7 @@ form.form2 {
     font-size: 23px;
 }
 
-.error {
+.main .error {
     margin-top: 30px;
     margin-bottom: -30px;
     color: #CF6679;
@@ -344,8 +375,8 @@ form.form1 {
     color: #fff;
     background: #F89C04;
     border: 0;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
     padding-bottom: 10px;
     padding-top: 10px;
     font-family: 'Ubuntu', sans-serif;

@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 
@@ -13,7 +16,7 @@
 </head>
 
 <body>
-    <img class="logo" src="logo.svg" alt="">
+    <img class="logo" src="logo.svg" alt="" style="margin-top:-20px">
     <div class="animation-area">
         <ul class="box-area">
             <li></li>
@@ -26,15 +29,22 @@
     </div>
     <div class="mainprofil">
         <p class="sign" align="center">My Profile</p>
-        <img class="profil"></img>
-        <form class="form1" action="" method="POST">
+        <?php echo '<img src="'.$_SESSION["user_image"].'" class="img-responsive img-circle img-thumbnail profil" />';?>
+        <?php if(isset($_SESSION['gagal_login'])) {
+			echo "<p class='error' align='center'>".$_SESSION['gagal_login']."</p>";
+		} ?>
+        <form class="form3" action="" method="POST">
             <div class="tulisan"> <label>Username</label></div>
-            <p class="un" type="text" name="username" align="center" placeholder="Username" required autocomplete="OFF"></p>
+            <input class="un" type="text" name="username" align="center" placeholder="Username" required autocomplete="OFF">
             <div class="tulisan"> <label>Email</label></div>
-            <p class="un" type="text" name="email" align="center" placeholder="Email" required autocomplete="OFF"></p>
+            <input class="un" type="text" name="email" align="center" placeholder="Email" required autocomplete="OFF">
             <div class="tulisan"> <label>Password</label></div>
-            <p class="pass" type="text" name="password1" align="center" placeholder="Password" id="password"></p>
-            <!--<button class="submit" name="submit" type="submit" align="center">Change My Profile</button>-->
+            <input class="pass" type="password" name="password1" align="center" placeholder="Password" id="password">
+            <label class="show"> Show Password
+			<input type="checkbox" name="checked" id="checkbox">
+				<span class="checkmark"></span>
+			</label>
+            <button class="submit" name="submit" type="submit" align="center">CONFIRM</button>
             <center>
                 <p><a href="index.php"><ins>Back</ins></a></p>
             </center>
