@@ -3,10 +3,36 @@ session_start();
 
 include 'function.php';
 include('config.php');
+include "FaceDetector.php";
 
 if ($_SESSION['status'] !="LOGIN") {
 	header("Location: login.php");
 	exit;
+}
+if (isset($_POST['uploadurl'])) {
+	$url_to_image = $_POST['url'];
+	$my_save_dir = 'img/';
+	$filename = basename($url_to_image);
+	$complete_save_loc = $my_save_dir.$filename;
+	file_put_contents($complete_save_loc,file_get_contents($url_to_image));
+ 
+	$detector = new svay\FaceDetector('detection.dat');
+	$detector->faceDetect($complete_save_loc);
+	$detector->toJpeg();
+}
+if (isset($_POST['upload'])) {
+	$namafile = $_FILES['file']['name'];
+	$error = $_FILES['file']['error'];
+	$tmpname = $_FILES['file']['tmp_name'];
+	$my_save_dir = 'img/';
+	$complete_save_loc = $my_save_dir.$namafile;
+    //gambar siap diupload
+	move_uploaded_file($tmpname, $complete_save_loc);
+	
+	$detector = new svay\FaceDetector('detection.dat');
+	$detector->faceDetect($complete_save_loc);
+	$detector->toJpeg();
+ 
 }
 ?>
 
@@ -44,11 +70,11 @@ if ($_SESSION['status'] !="LOGIN") {
 		</div>
 	</div>
 	<div class=" maindex">
-		<form class="form2" action="" method="POST">
-			<input class="urldex" type="text" name="urldex" align="center" placeholder="Input URL">
-			<button class="sub" type="text" name="sub" align="center">SUBMIT</button>
+		<form class="form2" action="" method="POST" enctype="multipart/form-data">
+			<input class="urldex" type="text" name="url" align="center" placeholder="Input URL">
+			<button class="sub" type="text" name="uploadurl" align="center">SUBMIT</button>
 			<input type="file" name="file" id="file" class="urldex">
-			<button class="sub" type="text" name="sub" align="center">SUBMIT</button>
+			<button class="sub" type="text" name="upload" align="center">SUBMIT</button>
 		</form>
 	</div>
 

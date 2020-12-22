@@ -20,7 +20,7 @@ $result2 = mysqli_fetch_assoc($result);
 </head>
 
 <body>
-    <img class="logo" src="logo.svg" alt="" style="margin-top:-20px">
+    <img class="logo" src="logo.svg" alt="" style="margin-top:-5px">
     <div class="animation-area">
         <ul class="box-area">
             <li></li>
