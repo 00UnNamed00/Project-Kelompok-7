@@ -69,15 +69,30 @@ if (isset($_POST['upload'])) {
 			<a href="logout.php" align="center">Logout</a>
 		</div>
 	</div>
+
 	<div class=" maindex">
 		<form class="form2" action="" method="POST" enctype="multipart/form-data">
+		<h2>Select input URL or Local File</h2>
 			<input class="urldex" type="text" name="url" align="center" placeholder="Input URL">
 			<button class="sub" type="text" name="uploadurl" align="center">SUBMIT</button>
-			<input type="file" name="file" id="file" class="urldex">
-			<button class="sub" type="text" name="upload" align="center">SUBMIT</button>
+			<br><br><br>
+			<label for="file" align="center">Choose File</label>
+			<input type="file" name="file" id="file" class="urldex" align="center" hidden>
+			<br><br>
+			<span id="btn-span" align="center">No file chosen</span>
+			<br>
+			<button class="sub" type="text" name="upload" align="center" style="margin-top : 20px">SUBMIT</button>
 		</form>
 	</div>
 
+	<script>
+		var actualBtn = document.getElementById('file');
+        var fileChosen = document.getElementById('btn-span');
+        actualBtn.addEventListener('change', function() {
+            fileChosen.textContent = this.files[0].name
+		})
+		
+	</script>
 
 
 </body>

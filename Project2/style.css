@@ -133,7 +133,7 @@ img.profil {
 /*untuk di index*/
 
 form.form2 {
-    padding-top: 100px;
+    padding-top: 20px;
 }
 
 .maindex {
@@ -499,4 +499,35 @@ img.logo {
     width: 4rem;
     height: auto;
     position: absolute;
+}
+
+.maindex label {
+    cursor: pointer;
+    border-radius: 5em;
+    color: #fff;
+    background: #F89C04;
+    border: 0;
+    padding-left: 110px;
+    padding-right: 110px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    width: 120px;
+    font-family: 'Ubuntu', sans-serif;
+    margin-left: 10%;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 100px;
+}
+
+.maindex span {
+    font-family: 'Ubuntu', sans-serif;
+    color: #fff;
+    margin-left: 36%;
+}
+
+.maindex h2 {
+    font-family: 'Ubuntu', sans-serif;
+    color: #F89C04;
+    text-align: center;
+    margin-bottom: 40px;
 }
